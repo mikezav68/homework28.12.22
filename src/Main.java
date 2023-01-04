@@ -3,11 +3,12 @@ public class Main {
         task1();
         task2();
         task3();
+        task4();
     }
 
     public static void task1() {
         System.out.println("Задача 1");
-        int clientOS = 0;
+        int clientOS = 1;
         switch (clientOS) {
             case 0:
                 System.out.println("Установите приложение для IOS по ссылке");
@@ -52,6 +53,23 @@ public class Main {
     public static void task3() {
         System.out.println("Задача 3");
         int year = 2021;
-
+        if ((year % 4 == 0 && year % 100 != 0) || (year % 400 ==0)) {
+            System.out.println("Год " + year + " - високосный"); }
+        else {
+            System.out.println("Год " + year + " - не високосный");
+        }
     }
+    public static void task4() {
+        System.out.println("Задача 4");
+        int deliveryDistance = 95;
+        int deliverydays = 0;
+        if (deliveryDistance < 20) { deliverydays = 1; }
+        else if (deliveryDistance < 60) { deliverydays = 2; }
+        else if (deliveryDistance < 100) { deliverydays = 3; }
+        if (deliverydays == 0) {
+            System.out.println("Доставка не осуществляется"); }
+            else {
+                System.out.println("Для доставки потребуется " + deliverydays + " дней");
+            }
+        }
 }
